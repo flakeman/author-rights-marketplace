@@ -46,6 +46,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 10002
         script: |
           cd /var/www/author-rights-marketplace
           git pull origin main
@@ -53,3 +54,4 @@ jobs:
           pip install -r backend/requirements.txt
           sudo systemctl restart marketplace
           sudo systemctl restart nginx
+
