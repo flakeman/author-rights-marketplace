@@ -1,0 +1,55 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install frontend dependencies
+      run: npm install --legacy-peer-deps
+      working-directory: frontend
+
+    - name: Build frontend
+      run: npm run build
+      working-directory: frontend
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install backend dependencies
+      run: pip install -r requirements.txt
+      working-directory: backend
+
+    - name: Copy frontend build to backend static
+      run: | 
+        rm -rf backend/static/*
+        cp -r frontend/dist/* backend/static/
+
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /var/www/author-rights-marketplace
+          git pull origin main
+          source backend/venv/bin/activate
+          pip install -r backend/requirements.txt
+          sudo systemctl restart marketplace
+          sudo systemctl restart nginx
