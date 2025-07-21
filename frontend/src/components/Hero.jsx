@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button.jsx'
 import { Play, ArrowRight, Shield, Users, FileText } from 'lucide-react'
-import heroImage from '../assets/Home .jpg'
 
 const Hero = () => {
   return (
@@ -56,46 +55,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right content - улучшенное изображение */}
-          <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-              <img 
-                src={heroImage} 
-                alt="Художница за работой" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
-            
-            {/* Улучшенные floating elements */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs transform hover:scale-105 transition-transform">
-              <div className="flex items-center space-x-4">
-                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <FileText className="h-7 w-7 text-blue-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900 text-lg">Управление проектами</p>
-                  <p className="text-sm text-gray-600">Создание и контроль</p>
-                </div>
-              </div>
-            </div>
 
-            <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs transform hover:scale-105 transition-transform">
-              <div className="flex items-center space-x-4">
-                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center">
-                  <Users className="h-7 w-7 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900 text-lg">Создание договоров</p>
-                  <p className="text-sm text-gray-600">Автоматизация процессов</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Дополнительный декоративный элемент */}
-            <div className="absolute top-1/2 -left-4 w-24 h-24 bg-blue-200 rounded-full opacity-50 animate-pulse"></div>
-            <div className="absolute bottom-1/4 -right-8 w-16 h-16 bg-purple-200 rounded-full opacity-50 animate-pulse delay-1000"></div>
-          </div>
         </div>
       </div>
       
