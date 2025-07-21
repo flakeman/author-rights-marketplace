@@ -49,6 +49,7 @@ jobs:
         port: 10002
         script: |
           cd /var/www/author-rights-marketplace
+          git reset --hard origin/main
           git pull origin main
           source backend/venv/bin/activate
           pip install -r backend/requirements.txt
