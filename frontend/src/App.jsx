@@ -16,24 +16,49 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'catalog':
-        return <CatalogPage setCurrentPage={setCurrentPage} />
+        return (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CatalogPage setCurrentPage={setCurrentPage} />
+          </div>
+        )
       case 'product':
-        return <ProductPage setCurrentPage={setCurrentPage} />
+        return (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ProductPage setCurrentPage={setCurrentPage} />
+          </div>
+        )
       default:
         return (
           <>
-            <Hero />
+            {/* Hero секция - полная ширина с центрированным контентом */}
+            <div className="w-full">
+              <div className="max-w-7xl mx-auto">
+                <Hero />
+              </div>
+            </div>
+            
+            {/* Основной контент - центрированный контейнер */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Основной контент - 70% ширины */}
                 <main className="lg:col-span-2 space-y-12">
-                  <AboutSection />
-                  <AdBanner />
-                  <NewsSection />
+                  <div className="max-w-4xl mx-auto">
+                    <AboutSection />
+                  </div>
+                  <div className="max-w-4xl mx-auto">
+                    <AdBanner />
+                  </div>
+                  <div className="max-w-4xl mx-auto">
+                    <NewsSection />
+                  </div>
                 </main>
                 
                 {/* Sidebar - 30% ширины */}
-                <Sidebar />
+                <aside className="lg:col-span-1">
+                  <div className="max-w-sm mx-auto lg:max-w-none">
+                    <Sidebar />
+                  </div>
+                </aside>
               </div>
             </div>
           </>
@@ -43,9 +68,21 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {/* Header - центрированный */}
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto">
+          <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        </div>
+      </div>
+      
       {renderPage()}
-      <Footer />
+      
+      {/* Footer - центрированный */}
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto">
+          <Footer />
+        </div>
+      </div>
     </div>
   )
 }
