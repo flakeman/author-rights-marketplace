@@ -31,18 +31,18 @@ const NewsSection = () => {
 
   return (
     <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900">Новости</h2>
-          <Button variant="outline" className="hidden md:flex">
-            Все новости
-            <ArrowRight className="h-4 w-4 ml-2" />
-          </Button>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Центрированный Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Новости и статьи</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Следите за последними новостями в сфере авторских прав и интеллектуальной собственности
+          </p>
         </div>
 
-        {/* News Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Центрированная News Grid */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {news.map((article) => (
             <article key={article.id} className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
               {/* Image */}
@@ -83,9 +83,9 @@ const NewsSection = () => {
           ))}
         </div>
 
-        {/* Mobile "All News" button */}
-        <div className="text-center mt-8 md:hidden">
-          <Button variant="outline">
+        {/* Центрированная кнопка "Все новости" */}
+        <div className="text-center mt-12">
+          <Button variant="outline" className="px-8 py-3">
             Все новости
             <ArrowRight className="h-4 w-4 ml-2" />
           </Button>

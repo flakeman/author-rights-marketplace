@@ -21,8 +21,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center h-16">
-          {/* Logo - увеличен размер */}
+        <div className="flex justify-between items-center h-16">
+          {/* Logo - левая сторона */}
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => handleNavigation('home')}>
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
@@ -32,8 +32,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
             </div>
           </div>
 
-          {/* Navigation - улучшенная структура */}
-          <nav className="hidden lg:flex space-x-6 mx-auto">
+          {/* Navigation - центр */}
+          <nav className="hidden lg:flex space-x-6 justify-center flex-1">
             <button 
               onClick={() => handleNavigation('home')}
               className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -68,7 +68,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             </a>
           </nav>
 
-          {/* Right side - улучшенная организация */}
+          {/* Right side - правая сторона */}
           <div className="flex items-center space-x-3">
             {/* Search - улучшенный поиск */}
             <div className="hidden md:flex items-center">

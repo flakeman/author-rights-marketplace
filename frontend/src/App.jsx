@@ -32,23 +32,23 @@ function App() {
           <>
             {/* Hero секция - полная ширина с центрированным контентом */}
             <div className="w-full">
-              <div className="max-w-7xl mx-auto">
+              <div className="max-w-6xl mx-auto">
                 <Hero />
               </div>
             </div>
             
             {/* Основной контент - центрированный контейнер */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Основной контент - 70% ширины */}
                 <main className="lg:col-span-2 space-y-12">
-                  <div className="max-w-4xl mx-auto">
+                  <div className="max-w-full mx-auto">
                     <AboutSection />
                   </div>
-                  <div className="max-w-4xl mx-auto">
+                  <div className="max-w-full mx-auto">
                     <AdBanner />
                   </div>
-                  <div className="max-w-4xl mx-auto">
+                  <div className="max-w-full mx-auto">
                     <NewsSection />
                   </div>
                 </main>
@@ -70,7 +70,7 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* Header - центрированный */}
       <div className="w-full">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
         </div>
       </div>
@@ -79,7 +79,7 @@ function App() {
       
       {/* Footer - центрированный */}
       <div className="w-full">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Footer />
         </div>
       </div>
