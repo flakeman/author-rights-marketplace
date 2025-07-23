@@ -11,16 +11,13 @@ const Footer = () => {
 
   const serviceLinks = [
     { title: "Регистрация авторских прав", href: "#registration" },
-    { title: "Управление проектами", href: "#projects" },
-    { title: "Создание договоров", href: "#contracts" },
     { title: "Маркетплейс", href: "#marketplace" }
   ]
 
   const supportLinks = [
     { title: "Центр поддержки", href: "#support" },
     { title: "Часто задаваемые вопросы", href: "#faq" },
-    { title: "Документация", href: "#docs" },
-    { title: "Обучающие материалы", href: "#training" }
+    { title: "Документация", href: "#docs" }
   ]
 
   const legalLinks = [

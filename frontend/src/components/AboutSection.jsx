@@ -9,16 +9,6 @@ const AboutSection = () => {
       description: "Мы обеспечиваем полный контроль над вашими правами и обеспечиваем их защиту на всех этапах творческого процесса."
     },
     {
-      icon: FileText,
-      title: "Создание договоров",
-      description: "Наш сервис — это инновационная система, созданная для авторов, правообладателей и инвесторов, которая обеспечивает эффективное управление авторскими правами и интеллектуальной собственностью."
-    },
-    {
-      icon: Users,
-      title: "Управление проектами",
-      description: "Мы обеспечиваем полный контроль над вашими правами и обеспечиваем их защиту на всех этапах творческого процесса."
-    },
-    {
       icon: TrendingUp,
       title: "Маркетплейс",
       description: "Платформа позволяет авторам продавать и лицензировать свои произведения, а инвесторам — находить перспективные проекты для вложений."
@@ -94,8 +84,8 @@ const AboutSection = () => {
         </div>
 
         {/* Центрированная сетка функций */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
