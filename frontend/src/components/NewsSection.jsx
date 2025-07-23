@@ -81,6 +81,7 @@ const NewsSection = () => {
               </div>
             </article>
           ))}
+          </div>
         </div>
 
         {/* Центрированная кнопка "Все новости" */}
@@ -96,4 +97,3 @@ const NewsSection = () => {
 }
 
 export default NewsSection
-
