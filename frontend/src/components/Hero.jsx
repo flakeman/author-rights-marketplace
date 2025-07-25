@@ -14,7 +14,12 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              ПРАВООБЛАДАТЕЛЬ
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-8">
+                <span>ПРАВООБЛАДАТЕЛЬ</span>
+                <span className="text-lg lg:text-xl font-normal text-gray-600 lg:max-w-xs lg:text-left">
+                  Автоматизированная система управления авторскими правами
+                </span>
+              </div>
               <span className="block text-blue-600 mt-2">АВТОМАТИЗИРОВАННАЯ СИСТЕМА</span>
               <span className="block text-gray-700 text-3xl lg:text-4xl mt-2">МЕНЕДЖМЕНТА</span>
             </h1>

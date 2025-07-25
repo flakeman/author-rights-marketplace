@@ -87,7 +87,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     onBlur={() => {
                       if (!searchQuery) setIsSearchExpanded(false)
                     }}
-                    className={`transition-all duration-300 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`transition-all duration-300 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent ${
                       isSearchExpanded ? 'w-full opacity-100' : 'w-0 opacity-0'
                     }`}
                   />
@@ -164,7 +164,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                   placeholder="Поиск..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
                 <Button 
                   type="submit"

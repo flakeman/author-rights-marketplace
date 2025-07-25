@@ -10,7 +10,6 @@ const Footer = () => {
   ]
 
   const serviceLinks = [
-    { title: "Регистрация авторских прав", href: "#registration" },
     { title: "Маркетплейс", href: "#marketplace" }
   ]
 
@@ -154,7 +153,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Ваш email"
-                className="flex-1 px-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               />
               <Button className="bg-blue-600 hover:bg-blue-700 px-6">
                 Подписаться
