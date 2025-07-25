@@ -55,18 +55,36 @@ const Header = ({ currentPage, setCurrentPage }) => {
               >
                 Каталог
               </button>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-4 py-2 text-sm font-medium rounded-md transition-colors">
+              <button 
+                onClick={() => handleNavigation('services')}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  currentPage === 'services' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
+              >
                 Услуги
-              </a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-4 py-2 text-sm font-medium rounded-md transition-colors">
+              </button>
+              <button 
+                onClick={() => handleNavigation('about')}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  currentPage === 'about' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
+              >
                 О компании
-              </a>
-              <a href="#news" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-4 py-2 text-sm font-medium rounded-md transition-colors">
-                Новости
-              </a>
-              <a href="#contacts" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-4 py-2 text-sm font-medium rounded-md transition-colors">
+              </button>
+              <button 
+                onClick={() => handleNavigation('contact')}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  currentPage === 'contact' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
+              >
                 Контакты
-              </a>
+              </button>
             </div>
           </nav>
 
@@ -141,18 +159,36 @@ const Header = ({ currentPage, setCurrentPage }) => {
             >
               Каталог
             </button>
-            <a href="#services" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 text-sm font-medium rounded-md transition-colors">
+            <button 
+              onClick={() => handleNavigation('services')}
+              className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentPage === 'services' 
+                  ? 'text-blue-600 bg-blue-50' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
               Услуги
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 text-sm font-medium rounded-md transition-colors">
+            </button>
+            <button 
+              onClick={() => handleNavigation('about')}
+              className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentPage === 'about' 
+                  ? 'text-blue-600 bg-blue-50' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
               О компании
-            </a>
-            <a href="#news" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 text-sm font-medium rounded-md transition-colors">
-              Новости
-            </a>
-            <a href="#contacts" className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 text-sm font-medium rounded-md transition-colors">
+            </button>
+            <button 
+              onClick={() => handleNavigation('contact')}
+              className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentPage === 'contact' 
+                  ? 'text-blue-600 bg-blue-50' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
               Контакты
-            </a>
+            </button>
           </nav>
           
           {/* Mobile search and auth */}
