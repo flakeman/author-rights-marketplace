@@ -45,9 +45,7 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
+        key: ${{ secrets.SSH_PRIVATE_KEY }}       script: |
           cd /var/www/author-rights-marketplace
           git reset --hard origin/main
           git pull origin main
