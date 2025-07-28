@@ -46,7 +46,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 10002
+        port: 22
         script: |
           cd /var/www/author-rights-marketplace
           git reset --hard origin/main
