@@ -33,7 +33,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
           </div>
 
           {/* Navigation - центр */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
+          <nav className="hidden lg:flex items-center flex-1 justify-end mx-8">
             <div className="flex space-x-6">
               <button 
                 onClick={() => handleNavigation('home')}
@@ -122,12 +122,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             </div>
 
             {/* Auth button - только кнопка Вход */}
-            <div className="hidden md:flex items-center">
-              <Button variant="outline" size="sm" className="text-sm">
-                <LogIn className="h-4 w-4 mr-2" />
-                Вход
-              </Button>
-            </div>
+
 
             {/* Mobile menu button */}
             <Button variant="ghost" size="sm" className="lg:hidden">
@@ -227,4 +222,3 @@ const Header = ({ currentPage, setCurrentPage }) => {
 }
 
 export default Header
-

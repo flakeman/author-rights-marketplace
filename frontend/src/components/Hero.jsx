@@ -36,13 +36,19 @@ const Hero = () => {
           {/* Центрированные CTA кнопки */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-10 py-5 text-xl font-semibold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-300">
-              <Play className="h-6 w-6 mr-3" />
-              Начать работу бесплатно
-              <ArrowRight className="h-6 w-6 ml-3" />
+              Обучение
             </Button>
             <Button variant="outline" className="px-10 py-5 text-xl font-semibold border-2 border-gray-300 hover:border-blue-500 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
-              <FileText className="h-6 w-6 mr-3" />
-              Посмотреть демо
+              Регистрация
+            </Button>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-10 py-5 text-xl font-semibold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-300">
+              Вход
+            </Button>
+            <Button variant="outline" className="px-10 py-5 text-xl font-semibold border-2 border-gray-300 hover:border-blue-500 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+              Управление проектом
+            </Button>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-10 py-5 text-xl font-semibold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-300">
+              Создание договоров
             </Button>
           </div>
 
