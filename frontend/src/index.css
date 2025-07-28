@@ -180,13 +180,7 @@
 }
 
 /* Улучшенные focus состояния */
-.focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-}
 
-.focus-ring-purple {
-  @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
-}
 
 /* Кастомные скроллбары */
 ::-webkit-scrollbar {
